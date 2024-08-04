@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Triage System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Triage System</h1>
+    </header>
+    <main>
+        <section id="triage-form">
+            <h2>Patient Triage Form</h2>
+            <form id="patient-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="severity">Severity of Condition:</label>
+                <select id="severity" name="severity" required>
+                    <option value="1">1 - Minor</option>
+                    <option value="2">2 - Moderate</option>
+                    <option value="3">3 - Serious</option>
+                    <option value="4">4 - Critical</option>
+                    <option value="5">5 - Life-threatening</option>
+                </select>
+                <button type="submit">Add Patient</button>
+            </form>
+        </section>
+        <section id="patient-list">
+            <h2>Patient Queue</h2>
+            <table id="queue-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Severity</th>
+                        <th>Estimated Wait Time (mins)</th>
+                    </tr>
+                </thead>
+                <tbody id="queue"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hospital Triage System</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
